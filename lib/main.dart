@@ -28,8 +28,6 @@ class _HomePageState extends State<HomePage> {
   final controller_peso = TextEditingController();
   final controller_altura = TextEditingController();
 
-  String mostrarIMC = "";
-
   String PesoM() {
     return (double.parse(controller_peso.text) /
             ((double.parse(controller_altura.text)) *
@@ -152,6 +150,12 @@ class _HomePageState extends State<HomePage> {
     //Scaffold indica que se formara una pantalla
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: Icon(Icons.delete_forever),
+            onPressed: () {},
+          ),
+        ],
         title: Text('Calcular IMC'),
         backgroundColor: Colors.green,
       ),
